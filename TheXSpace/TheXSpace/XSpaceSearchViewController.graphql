@@ -1,0 +1,23 @@
+query loadingLaunches {
+  launchesPast {
+    ...launches
+  }
+  launchesUpcoming {
+    ...launches
+  }
+}
+
+fragment launches on Launch{
+
+  mission_name
+  launch_year
+  launch_date_local
+  rocket {
+    rocket_name
+  }
+  links {
+    video_link
+  }
+}
+
+
